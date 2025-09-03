@@ -1,0 +1,130 @@
+---
+catalogue_url: https://catalogue.cioos.ca
+base_query: ""
+
+map:
+  center: [65, -110]
+  zoom: 4
+  zoom_mobile: 5
+
+default_language: en
+
+# Title shown on the navigation bar below the main logo
+title:
+  en:
+  fr:
+
+metadata:
+  en:
+    title: CIOOS Catalogue Map
+    description: CIOOS Catalogue Map is a web application that allows users to visualize and explore the catalogue of CIOOS.
+  fr:
+    title: Carte Catalogue du SIOOC
+    description: La carte du catalogue du SIOOC est une application Web qui permet aux utilisateurs de visualiser et d'explorer le catalogue du SIOOC.
+
+theme:
+  light: "#ffffff"
+  dark: "#000000"
+  primary_color: "#52a79b"
+  accent_color: "#fa7268"
+
+favicon: "/images/favicon.ico"
+
+# Logo configuration
+# Logos Configuration
+# ==========================
+# You can define:
+# - `url`: The file path or URL to the logo image.
+# - `mode`: Specifies the theme mode (e.g., "light" or "dark") in which the
+#           logo should be displayed.
+# - `alt`: The alternative text for the logo, used for accessibility and
+#          when the image cannot be displayed.
+# - `className`: A custom CSS class to replace the default class
+#                (default, "h-auto").
+# - `width`: The width of the logo in pixels or percentage.
+
+# main_logo: This logo is typically used as the main branding
+#           element in the application.
+main_logo:
+  - url: "/Images/cioos-national_EN-01.png"
+    lang: en
+    mode: light
+    alt: "CIOOS National"
+    className: "h-[75px] w-auto m-3"
+  - url: "/Images/cioos-national_FR-01.png"
+    lang: fr
+    mode: light
+    alt: "CIOOS National"
+    className: "h-[75px] w-auto m-3"
+  - url: "/Images/cioos-national_EN_W.svg"
+    lang: en
+    mode: dark
+    alt: "CIOOS National"
+    className: "h-[75px] w-auto m-3"
+  - url: "/Images/cioos-national_FR_W.svg"
+    lang: fr
+    mode: dark
+    alt: "CIOOS National"
+    className: "h-[75px] w-auto m-3"
+
+# bottom_logo: Specifies the footer or secondary logo,
+#  often used for additional branding or partner logos.
+bottom_logo:
+  # - url: "/Images/cioos-national_EN-01.png"
+  #   lang: en
+  #   mode: light
+  #   alt: "CIOOS National"
+  #   className: "max-h-[75px] h-auto m-3"
+  # - url: "/Images/cioos-national_FR-01.png"
+  #   lang: fr
+  #   mode: light
+  #   alt: "CIOOS National"
+  #   className: "max-h-[75px] h-auto m-3"
+  # - url: "/Images/cioos-national_EN_W.svg"
+  #   lang: en
+  #   mode: dark
+  #   alt: "CIOOS National"
+  #   className: "max-h-[75px] h-auto m-3"
+  # - url: "/Images/cioos-national_FR_W.svg"
+  #   lang: fr
+  #   mode: dark
+  #   alt: "CIOOS National"
+  #   className: "max-h-[75px] h-auto m-3"
+
+basemaps:
+  - name:
+      fr: "Bathymétrie"
+      en: "Bathymetry"
+    key: "bathymetry"
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}"
+    attribution: "Tiles &copy; Esri &mdash; Sources: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, and Esri"
+    checked: true
+    maxZoom: 10
+  - name:
+      fr: "Satellite"
+      en: "Satellite"
+    key: "satellite"
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+    attribution: "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
+
+# Pages Configuration
+# ==========================
+# This section defines the pages that will be available in the application.
+# Each page can have a label, an icon, and content in different languages.
+# Content can be provided as a markdown file or directly as text.
+#  - markdown_content: The path to a markdown file that contains the content
+#     for the page. Path should be relative to the public directory.
+#  - content: Direct text content for the page, which can also be localized.
+# markdown_content takes precedence over content.
+
+pages:
+  - label:
+      en: "About"
+      fr: "À propos"
+    icon: "info"
+    markdown_content:
+      en: "/about.md"
+      fr: "/a-propos.md"
+    content:
+      en: "This is a web application that allows users to visualize and explore the catalogue of SLGO."
+      fr: "Ceci est une application Web qui permet aux utilisateurs de visualiser et d'explorer le catalogue de l'OGSL."
