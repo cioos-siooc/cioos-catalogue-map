@@ -28,7 +28,7 @@ theme:
   primary_color: "#52a79b"
   accent_color: "#fa7268"
 
-favicon: "/images/favicon.ico"
+favicon: "./images/favicon.ico"
 
 # Logo configuration
 # Logos Configuration
@@ -123,8 +123,5 @@ pages:
       fr: "À propos"
     icon: "info"
     markdown_content:
-      en: "/about.md"
-      fr: "/a-propos.md"
-    content:
-      en: "This is a web application that allows users to visualize and explore the catalogue of SLGO."
-      fr: "Ceci est une application Web qui permet aux utilisateurs de visualiser et d'explorer le catalogue de l'OGSL."
+      en: "./about.md"
+      fr: "./a-propos.md"
